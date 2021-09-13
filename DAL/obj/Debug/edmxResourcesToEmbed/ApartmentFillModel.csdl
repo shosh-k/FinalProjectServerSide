@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ApartmentFillDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CodeCategory" />
+    </Key>
+    <Property Name="CodeCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__1A14E395" FromRole="Categories" ToRole="Products" />
+    <NavigationProperty Name="SubCategories" Relationship="Self.FK__SubCatego__CodeC__145C0A3F" FromRole="Categories" ToRole="SubCategories" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="CodeCity" />
+    </Key>
+    <Property Name="CodeCity" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__Produc__1DE57479" FromRole="Cities" ToRole="Products" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__CityUser__173876EA" FromRole="Cities" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="LikeProducts">
+    <Key>
+      <PropertyRef Name="CodeLikeProduct" />
+    </Key>
+    <Property Name="CodeLikeProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeProduct" Type="Int32" />
+    <Property Name="CodeUser" Type="Int32" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__LikeProdu__CodeP__20C1E124" FromRole="LikeProducts" ToRole="Products" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__LikeProdu__CodeU__21B6055D" FromRole="LikeProducts" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="CodeProduct" />
+    </Key>
+    <Property Name="CodeProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameProduct" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryProduct" Type="Int32" />
+    <Property Name="SubCategoryProduct" Type="Int32" />
+    <Property Name="CodeSallerProduct" Type="Int32" />
+    <Property Name="PriceProduct" Type="Double" />
+    <Property Name="DescriptionProduct" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="StatusProduct" Type="Int32" />
+    <Property Name="MoveOrBuy" Type="Int32" />
+    <Property Name="NewOrOld" Type="Int32" />
+    <Property Name="ProductCity" Type="Int32" />
+    <Property Name="ImajeProdact" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK__Products__Catego__1A14E395" FromRole="Products" ToRole="Categories" />
+    <NavigationProperty Name="Cities" Relationship="Self.FK__Products__Produc__1DE57479" FromRole="Products" ToRole="Cities" />
+    <NavigationProperty Name="LikeProducts" Relationship="Self.FK__LikeProdu__CodeP__20C1E124" FromRole="Products" ToRole="LikeProducts" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Products__CodeSa__1BFD2C07" FromRole="Products" ToRole="Users" />
+    <NavigationProperty Name="SubCategories" Relationship="Self.FK__Products__SubCat__1B0907CE" FromRole="Products" ToRole="SubCategories" />
+    <NavigationProperty Name="ShoppingCasts" Relationship="ApartmentFillDBModel.FK__ShoppingC__CodeP__37A5467C" FromRole="Products" ToRole="ShoppingCast" />
+  </EntityType>
+  <EntityType Name="SubCategories">
+    <Key>
+      <PropertyRef Name="CodeSubCategory" />
+    </Key>
+    <Property Name="CodeSubCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameSubCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CodeCategorySub" Type="Int32" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK__SubCatego__CodeC__145C0A3F" FromRole="SubCategories" ToRole="Categories" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__SubCat__1B0907CE" FromRole="SubCategories" ToRole="Products" />
+    <NavigationProperty Name="MoneSubCategories" Relationship="ApartmentFillDBModel.FK__MoneSubCa__SubCa__4222D4EF" FromRole="SubCategories" ToRole="MoneSubCategory" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="CodeUser" />
+    </Key>
+    <Property Name="CodeUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUser" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="FirstNameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastNameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PasswordUser" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EmailUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneUser1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneUser2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CityUser" Type="Int32" />
+    <Property Name="AddresstUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cities" Relationship="Self.FK__Users__CityUser__173876EA" FromRole="Users" ToRole="Cities" />
+    <NavigationProperty Name="LikeProducts" Relationship="Self.FK__LikeProdu__CodeU__21B6055D" FromRole="Users" ToRole="LikeProducts" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__CodeSa__1BFD2C07" FromRole="Users" ToRole="Products" />
+    <NavigationProperty Name="LearningMachin" Relationship="ApartmentFillDBModel.FK__LearningM__CodeU__44FF419A" FromRole="Users" ToRole="LearningMachin" />
+    <NavigationProperty Name="MoneColors" Relationship="ApartmentFillDBModel.FK__MoneColor__CodeU__3D5E1FD2" FromRole="Users" ToRole="MoneColor" />
+    <NavigationProperty Name="MoneSubCategories" Relationship="ApartmentFillDBModel.FK__MoneSubCa__CodeU__412EB0B6" FromRole="Users" ToRole="MoneSubCategory" />
+    <NavigationProperty Name="ShoppingCasts" Relationship="ApartmentFillDBModel.FK__ShoppingC__CodeU__38996AB5" FromRole="Users" ToRole="ShoppingCast" />
+  </EntityType>
+  <Association Name="FK__Products__Catego__1A14E395">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CodeCategory" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCatego__CodeC__145C0A3F">
+    <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+    <End Role="SubCategories" Type="Self.SubCategories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CodeCategory" />
+      </Principal>
+      <Dependent Role="SubCategories">
+        <PropertyRef Name="CodeCategorySub" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__Produc__1DE57479">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="CodeCity" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="ProductCity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__CityUser__173876EA">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="CodeCity" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="CityUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LikeProdu__CodeP__20C1E124">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="LikeProducts" Type="Self.LikeProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="CodeProduct" />
+      </Principal>
+      <Dependent Role="LikeProducts">
+        <PropertyRef Name="CodeProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LikeProdu__CodeU__21B6055D">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="LikeProducts" Type="Self.LikeProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="CodeUser" />
+      </Principal>
+      <Dependent Role="LikeProducts">
+        <PropertyRef Name="CodeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__CodeSa__1BFD2C07">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="CodeUser" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CodeSallerProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__SubCat__1B0907CE">
+    <End Role="SubCategories" Type="Self.SubCategories" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategories">
+        <PropertyRef Name="CodeSubCategory" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="SubCategoryProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ApartmentFillDBEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Categories" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" />
+    <EntitySet Name="LikeProducts" EntityType="Self.LikeProducts" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="SubCategories" EntityType="Self.SubCategories" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK__Products__Catego__1A14E395" Association="Self.FK__Products__Catego__1A14E395">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCatego__CodeC__145C0A3F" Association="Self.FK__SubCatego__CodeC__145C0A3F">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="SubCategories" EntitySet="SubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__Produc__1DE57479" Association="Self.FK__Products__Produc__1DE57479">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__CityUser__173876EA" Association="Self.FK__Users__CityUser__173876EA">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LikeProdu__CodeP__20C1E124" Association="Self.FK__LikeProdu__CodeP__20C1E124">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="LikeProducts" EntitySet="LikeProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LikeProdu__CodeU__21B6055D" Association="Self.FK__LikeProdu__CodeU__21B6055D">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="LikeProducts" EntitySet="LikeProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__CodeSa__1BFD2C07" Association="Self.FK__Products__CodeSa__1BFD2C07">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__SubCat__1B0907CE" Association="Self.FK__Products__SubCat__1B0907CE">
+      <End Role="SubCategories" EntitySet="SubCategories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <EntitySet Name="Colors" EntityType="ApartmentFillDBModel.Color" />
+    <EntitySet Name="LearningMachins" EntityType="ApartmentFillDBModel.LearningMachin" />
+    <EntitySet Name="MoneColors" EntityType="ApartmentFillDBModel.MoneColor" />
+    <EntitySet Name="MoneSubCategories" EntityType="ApartmentFillDBModel.MoneSubCategory" />
+    <EntitySet Name="ShoppingCasts" EntityType="ApartmentFillDBModel.ShoppingCast" />
+    <AssociationSet Name="FK__MoneColor__CodeC__3E52440B" Association="ApartmentFillDBModel.FK__MoneColor__CodeC__3E52440B">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="MoneColor" EntitySet="MoneColors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LearningM__CodeM__45F365D3" Association="ApartmentFillDBModel.FK__LearningM__CodeM__45F365D3">
+      <End Role="MoneColor" EntitySet="MoneColors" />
+      <End Role="LearningMachin" EntitySet="LearningMachins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LearningM__CodeM__46E78A0C" Association="ApartmentFillDBModel.FK__LearningM__CodeM__46E78A0C">
+      <End Role="MoneSubCategory" EntitySet="MoneSubCategories" />
+      <End Role="LearningMachin" EntitySet="LearningMachins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LearningM__CodeU__44FF419A" Association="ApartmentFillDBModel.FK__LearningM__CodeU__44FF419A">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="LearningMachin" EntitySet="LearningMachins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MoneColor__CodeU__3D5E1FD2" Association="ApartmentFillDBModel.FK__MoneColor__CodeU__3D5E1FD2">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="MoneColor" EntitySet="MoneColors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MoneSubCa__CodeU__412EB0B6" Association="ApartmentFillDBModel.FK__MoneSubCa__CodeU__412EB0B6">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="MoneSubCategory" EntitySet="MoneSubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MoneSubCa__SubCa__4222D4EF" Association="ApartmentFillDBModel.FK__MoneSubCa__SubCa__4222D4EF">
+      <End Role="SubCategories" EntitySet="SubCategories" />
+      <End Role="MoneSubCategory" EntitySet="MoneSubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShoppingC__CodeP__37A5467C" Association="ApartmentFillDBModel.FK__ShoppingC__CodeP__37A5467C">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="ShoppingCast" EntitySet="ShoppingCasts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ShoppingC__CodeU__38996AB5" Association="ApartmentFillDBModel.FK__ShoppingC__CodeU__38996AB5">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ShoppingCast" EntitySet="ShoppingCasts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="CodeColor" />
+    </Key>
+    <Property Name="CodeColor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Color1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="MoneColors" Relationship="ApartmentFillDBModel.FK__MoneColor__CodeC__3E52440B" FromRole="Color" ToRole="MoneColor" />
+  </EntityType>
+  <EntityType Name="LearningMachin">
+    <Key>
+      <PropertyRef Name="CodeUser" />
+    </Key>
+    <Property Name="CodeUser" Type="Int32" Nullable="false" />
+    <Property Name="LowPrice" Type="Int32" />
+    <Property Name="HighPrice" Type="Int32" />
+    <Property Name="CloseCity" Type="Int32" />
+    <Property Name="CodeMoneColor" Type="Int32" />
+    <Property Name="CodeMoneSubCategory" Type="Int32" />
+    <NavigationProperty Name="MoneColor" Relationship="ApartmentFillDBModel.FK__LearningM__CodeM__45F365D3" FromRole="LearningMachin" ToRole="MoneColor" />
+    <NavigationProperty Name="MoneSubCategory" Relationship="ApartmentFillDBModel.FK__LearningM__CodeM__46E78A0C" FromRole="LearningMachin" ToRole="MoneSubCategory" />
+    <NavigationProperty Name="User" Relationship="ApartmentFillDBModel.FK__LearningM__CodeU__44FF419A" FromRole="LearningMachin" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="MoneColor">
+    <Key>
+      <PropertyRef Name="CodeMoneColor" />
+    </Key>
+    <Property Name="CodeMoneColor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeUser" Type="Int32" />
+    <Property Name="CodeColor" Type="Int32" />
+    <Property Name="Mone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Color" Relationship="ApartmentFillDBModel.FK__MoneColor__CodeC__3E52440B" FromRole="MoneColor" ToRole="Color" />
+    <NavigationProperty Name="LearningMachins" Relationship="ApartmentFillDBModel.FK__LearningM__CodeM__45F365D3" FromRole="MoneColor" ToRole="LearningMachin" />
+    <NavigationProperty Name="User" Relationship="ApartmentFillDBModel.FK__MoneColor__CodeU__3D5E1FD2" FromRole="MoneColor" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="MoneSubCategory">
+    <Key>
+      <PropertyRef Name="CodeMoneSubCategory" />
+    </Key>
+    <Property Name="CodeMoneSubCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeUser" Type="Int32" />
+    <Property Name="SubCategory" Type="Int32" />
+    <Property Name="Mone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LearningMachins" Relationship="ApartmentFillDBModel.FK__LearningM__CodeM__46E78A0C" FromRole="MoneSubCategory" ToRole="LearningMachin" />
+    <NavigationProperty Name="User" Relationship="ApartmentFillDBModel.FK__MoneSubCa__CodeU__412EB0B6" FromRole="MoneSubCategory" ToRole="Users" />
+    <NavigationProperty Name="SubCategory1" Relationship="ApartmentFillDBModel.FK__MoneSubCa__SubCa__4222D4EF" FromRole="MoneSubCategory" ToRole="SubCategories" />
+  </EntityType>
+  <EntityType Name="ShoppingCast">
+    <Key>
+      <PropertyRef Name="CodeLikeProduct" />
+    </Key>
+    <Property Name="CodeLikeProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeProduct" Type="Int32" />
+    <Property Name="CodeUser" Type="Int32" />
+    <NavigationProperty Name="Product" Relationship="ApartmentFillDBModel.FK__ShoppingC__CodeP__37A5467C" FromRole="ShoppingCast" ToRole="Products" />
+    <NavigationProperty Name="User" Relationship="ApartmentFillDBModel.FK__ShoppingC__CodeU__38996AB5" FromRole="ShoppingCast" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK__MoneColor__CodeC__3E52440B">
+    <End Type="ApartmentFillDBModel.Color" Role="Color" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.MoneColor" Role="MoneColor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="CodeColor" />
+      </Principal>
+      <Dependent Role="MoneColor">
+        <PropertyRef Name="CodeColor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LearningM__CodeM__45F365D3">
+    <End Type="ApartmentFillDBModel.MoneColor" Role="MoneColor" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.LearningMachin" Role="LearningMachin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MoneColor">
+        <PropertyRef Name="CodeMoneColor" />
+      </Principal>
+      <Dependent Role="LearningMachin">
+        <PropertyRef Name="CodeMoneColor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LearningM__CodeM__46E78A0C">
+    <End Type="ApartmentFillDBModel.MoneSubCategory" Role="MoneSubCategory" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.LearningMachin" Role="LearningMachin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MoneSubCategory">
+        <PropertyRef Name="CodeMoneSubCategory" />
+      </Principal>
+      <Dependent Role="LearningMachin">
+        <PropertyRef Name="CodeMoneSubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LearningM__CodeU__44FF419A">
+    <End Type="ApartmentFillDBModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="ApartmentFillDBModel.LearningMachin" Role="LearningMachin" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="CodeUser" />
+      </Principal>
+      <Dependent Role="LearningMachin">
+        <PropertyRef Name="CodeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MoneColor__CodeU__3D5E1FD2">
+    <End Type="ApartmentFillDBModel.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.MoneColor" Role="MoneColor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="CodeUser" />
+      </Principal>
+      <Dependent Role="MoneColor">
+        <PropertyRef Name="CodeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MoneSubCa__CodeU__412EB0B6">
+    <End Type="ApartmentFillDBModel.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.MoneSubCategory" Role="MoneSubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="CodeUser" />
+      </Principal>
+      <Dependent Role="MoneSubCategory">
+        <PropertyRef Name="CodeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MoneSubCa__SubCa__4222D4EF">
+    <End Type="ApartmentFillDBModel.SubCategories" Role="SubCategories" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.MoneSubCategory" Role="MoneSubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubCategories">
+        <PropertyRef Name="CodeSubCategory" />
+      </Principal>
+      <Dependent Role="MoneSubCategory">
+        <PropertyRef Name="SubCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShoppingC__CodeP__37A5467C">
+    <End Type="ApartmentFillDBModel.Products" Role="Products" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.ShoppingCast" Role="ShoppingCast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="CodeProduct" />
+      </Principal>
+      <Dependent Role="ShoppingCast">
+        <PropertyRef Name="CodeProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ShoppingC__CodeU__38996AB5">
+    <End Type="ApartmentFillDBModel.Users" Role="Users" Multiplicity="0..1" />
+    <End Type="ApartmentFillDBModel.ShoppingCast" Role="ShoppingCast" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="CodeUser" />
+      </Principal>
+      <Dependent Role="ShoppingCast">
+        <PropertyRef Name="CodeUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

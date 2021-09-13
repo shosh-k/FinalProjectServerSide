@@ -1,0 +1,90 @@
+C:\Users\ככץ\Desktop\ApartmentFill\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\ככץ\Desktop\ApartmentFill\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\bin\Debug\DAL.dll.config
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\bin\Debug\DAL.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\bin\Debug\DAL.pdb
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\bin\Debug\EntityFramework.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\bin\Debug\EntityFramework.xml
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.pdb
+F:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+F:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+F:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.dll
+F:\פרויקט סמינר\חדש- תכולת דירה\new\ApartmentFill\DAL\obj\Debug\DAL.pdb
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\DAL.dll.config
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\DAL.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\DAL.pdb
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\EntityFramework.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\EntityFramework.xml
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.xml
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\obj\Debug\DAL.dll
+E:\פרויקט סמינר\חדש- תכולת דירה\8 good\ApartmentFill\DAL\obj\Debug\DAL.pdb
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\DAL.dll.config
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\DAL.dll
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\DAL.pdb
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\ApartmentFill\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\User\Desktop\ApartmentFill\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\ApartmentFill\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\User\Desktop\ApartmentFill\DAL\obj\Debug\DAL.dll
+C:\Users\User\Desktop\ApartmentFill\DAL\obj\Debug\DAL.pdb
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\DAL.dll.config
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\DAL.dll
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\DAL.pdb
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\EntityFramework.dll
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\EntityFramework.xml
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\obj\Debug\DAL.dll
+C:\Users\IMOE001\Desktop\פרויקט\9\ApartmentFill\DAL\obj\Debug\DAL.pdb
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\obj\Debug\DAL.dll
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\obj\Debug\DAL.pdb
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\DAL.dll.config
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\DAL.dll
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\DAL.pdb
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\EntityFramework.dll
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\EntityFramework.xml
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\IMOE001\Desktop\פרויקטים\1\ApartmentFill\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\DAL.dll.config
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\DAL.dll
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\DAL.pdb
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\EntityFramework.dll
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\EntityFramework.xml
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\obj\Debug\DAL.dll
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\obj\Debug\DAL.pdb
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\Models.dll
+C:\Users\IMOE001\Desktop\פרויקטים\3\ComforTable\DAL\bin\Debug\Models.pdb

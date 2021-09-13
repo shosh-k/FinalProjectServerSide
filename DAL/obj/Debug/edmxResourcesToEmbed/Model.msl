@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ApartmentFillDBModelStoreContainer" CdmEntityContainer="ApartmentFillDBEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.Categories">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="CodeCategory" ColumnName="CodeCategory" />
+          <ScalarProperty Name="NameCategory" ColumnName="NameCategory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.Cities">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="CodeCity" ColumnName="CodeCity" />
+          <ScalarProperty Name="NameCity" ColumnName="NameCity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Imajes">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.Imajes">
+        <MappingFragment StoreEntitySet="Imajes">
+          <ScalarProperty Name="CodeImaje" ColumnName="CodeImaje" />
+          <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+          <ScalarProperty Name="PuthImaje" ColumnName="PuthImaje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LikeProducts">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.LikeProducts">
+        <MappingFragment StoreEntitySet="LikeProducts">
+          <ScalarProperty Name="CodeLikeProduct" ColumnName="CodeLikeProduct" />
+          <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+          <ScalarProperty Name="CodeUser" ColumnName="CodeUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.Products">
+        <MappingFragment StoreEntitySet="Products">
+          <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+          <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+          <ScalarProperty Name="CategoryProduct" ColumnName="CategoryProduct" />
+          <ScalarProperty Name="SubCategoryProduct" ColumnName="SubCategoryProduct" />
+          <ScalarProperty Name="CodeSallerProduct" ColumnName="CodeSallerProduct" />
+          <ScalarProperty Name="PriceProduct" ColumnName="PriceProduct" />
+          <ScalarProperty Name="DescriptionProduct" ColumnName="DescriptionProduct" />
+          <ScalarProperty Name="StatusProduct" ColumnName="StatusProduct" />
+          <ScalarProperty Name="MoveOrBuy" ColumnName="MoveOrBuy" />
+          <ScalarProperty Name="NewOrOld" ColumnName="NewOrOld" />
+          <ScalarProperty Name="ProductCity" ColumnName="ProductCity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoppingCast">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.ShoppingCast">
+        <MappingFragment StoreEntitySet="ShoppingCast">
+          <ScalarProperty Name="CodeShoppingCast" ColumnName="CodeShoppingCast" />
+          <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+          <ScalarProperty Name="CodeUser" ColumnName="CodeUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubCategories">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.SubCategories">
+        <MappingFragment StoreEntitySet="SubCategories">
+          <ScalarProperty Name="CodeSubCategory" ColumnName="CodeSubCategory" />
+          <ScalarProperty Name="NameSubCategory" ColumnName="NameSubCategory" />
+          <ScalarProperty Name="CodeCategorySub" ColumnName="CodeCategorySub" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ApartmentFillDBModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="CodeUser" ColumnName="CodeUser" />
+          <ScalarProperty Name="FirstNameUser" ColumnName="FirstNameUser" />
+          <ScalarProperty Name="LastNameUser" ColumnName="LastNameUser" />
+          <ScalarProperty Name="PasswordUser" ColumnName="PasswordUser" />
+          <ScalarProperty Name="EmailUser" ColumnName="EmailUser" />
+          <ScalarProperty Name="PhoneUser" ColumnName="PhoneUser" />
+          <ScalarProperty Name="CityUser" ColumnName="CityUser" />
+          <ScalarProperty Name="AddresstUser" ColumnName="AddresstUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

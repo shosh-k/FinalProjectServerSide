@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DAL.DBConnection">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="DAL.DBConnection.ExecuteActions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>DBConnection.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DBConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.ComforTableEntities">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAEAAAEAASAAAAAAAQQAU=</HashCode>
+      <FileName>ModelComforTable.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Categories">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAQ=</HashCode>
+      <FileName>Categories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Imajes">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAADwAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Imajes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.LikeProducts">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAgAAAAAAAACAAAAAQAAAAAAAAAQ=</HashCode>
+      <FileName>LikeProducts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Products">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAmAEAoAAAAAAAgAAAAAAAAAAEAASAAAAAAAUQAA=</HashCode>
+      <FileName>Products.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.SearchOfUser">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAAAAAAAAAAAABAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SearchOfUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.ShoppingCast">
+    <Position X="10.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAEAAgAAAAAAAACAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ShoppingCast.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.SubCategories">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAACAAAAAAAEAAAAAAAQAAAAAQ=</HashCode>
+      <FileName>SubCategories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Users">
+    <Position X="1.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAKAAAAEAAAAAAAgAIAAICAAAAQAAAAAAAAQAU=</HashCode>
+      <FileName>Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.CategoryConvert">
+    <Position X="12.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAgA=</HashCode>
+      <FileName>Converts\CategoryConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.ImageConvert">
+    <Position X="12.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAA=</HashCode>
+      <FileName>Converts\ImageConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.LikeProductConvert">
+    <Position X="14.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAIAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Converts\LikeProductConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.ProductConvert">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Converts\ProductConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.SearchOfUserConvert">
+    <Position X="14.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAIAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converts\SearchOfUserConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.ShoppingCastConvert">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAQAAAAAAg=</HashCode>
+      <FileName>Converts\ShoppingCastConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.SubCategoryConvert">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAgAAEAAAAAAA=</HashCode>
+      <FileName>Converts\SubCategoryConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAL.Converts.UserConvert">
+    <Position X="16" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAABAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Converts\UserConvert.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

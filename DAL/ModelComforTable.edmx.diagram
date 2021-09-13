@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38bcc5f6caa74a5e83e12f55aceac473" Name="Diagram1" ZoomLevel="63">
+        <EntityTypeShape EntityType="ComforTableModel.Categories" Width="1.5" PointX="26.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComforTableModel.Imajes" Width="1.5" PointX="24.375" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComforTableModel.LikeProducts" Width="1.5" PointX="22.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComforTableModel.Products" Width="1.5" PointX="24.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComforTableModel.SearchOfUser" Width="1.5" PointX="17.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComforTableModel.ShoppingCast" Width="1.5" PointX="22.25" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComforTableModel.SubCategories" Width="1.5" PointX="26.875" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ComforTableModel.Users" Width="1.5" PointX="20.125" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="ComforTableModel.FK__Products__Catego__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__SubCatego__CodeC__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__Imajes__CodeProd__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__LikeProdu__CodeP__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__LikeProdu__CodeU__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__Products__CodeSa__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__Products__SubCat__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__ShoppingC__CodeP__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__SearchOfU__CodeU__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="ComforTableModel.FK__ShoppingC__CodeU__3A81B327" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

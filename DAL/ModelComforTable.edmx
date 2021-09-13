@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ComforTableModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CodeCategory" />
+          </Key>
+          <Property Name="CodeCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameCategory" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Imajes">
+          <Key>
+            <PropertyRef Name="CodeImaje" />
+          </Key>
+          <Property Name="CodeImaje" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodeProduct" Type="int" />
+          <Property Name="PuthImaje1" Type="nvarchar" MaxLength="200" />
+          <Property Name="PuthImaje2" Type="nvarchar" MaxLength="200" />
+          <Property Name="PuthImaje3" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="LikeProducts">
+          <Key>
+            <PropertyRef Name="CodeLikeProduct" />
+          </Key>
+          <Property Name="CodeLikeProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodeProduct" Type="int" />
+          <Property Name="CodeUser" Type="int" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="CodeProduct" />
+          </Key>
+          <Property Name="CodeProduct" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameProduct" Type="nvarchar" MaxLength="50" />
+          <Property Name="CategoryProduct" Type="int" />
+          <Property Name="SubCategoryProduct" Type="int" />
+          <Property Name="CodeSallerProduct" Type="int" />
+          <Property Name="PriceProduct" Type="float" />
+          <Property Name="DescriptionProduct" Type="nvarchar" MaxLength="100" />
+          <Property Name="StatusProduct" Type="int" />
+          <Property Name="MoveOrBuy" Type="int" />
+          <Property Name="NewOrOld" Type="int" />
+          <Property Name="ProductSold" Type="int" />
+        </EntityType>
+        <EntityType Name="SearchOfUser">
+          <Key>
+            <PropertyRef Name="CodeSearchOfUser" />
+          </Key>
+          <Property Name="CodeSearchOfUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="searchPath" Type="nvarchar" MaxLength="200" />
+          <Property Name="CodeUser" Type="int" />
+        </EntityType>
+        <EntityType Name="ShoppingCast">
+          <Key>
+            <PropertyRef Name="CodeShoppingCast" />
+          </Key>
+          <Property Name="CodeShoppingCast" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CodeProduct" Type="int" />
+          <Property Name="CodeUser" Type="int" />
+        </EntityType>
+        <EntityType Name="SubCategories">
+          <Key>
+            <PropertyRef Name="CodeSubCategory" />
+          </Key>
+          <Property Name="CodeSubCategory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameSubCategory" Type="nvarchar" MaxLength="50" />
+          <Property Name="CodeCategorySub" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="CodeUser" />
+          </Key>
+          <Property Name="CodeUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstNameUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastNameUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="PasswordUser" Type="nvarchar" MaxLength="15" />
+          <Property Name="EmailUser" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhoneUser" Type="nvarchar" MaxLength="10" />
+          <Property Name="AddresstUser" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__Imajes__CodeProd__32AB8735">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="Imajes" Type="Self.Imajes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="CodeProduct" />
+            </Principal>
+            <Dependent Role="Imajes">
+              <PropertyRef Name="CodeProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LikeProdu__CodeP__3587F3E0">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="LikeProducts" Type="Self.LikeProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="CodeProduct" />
+            </Principal>
+            <Dependent Role="LikeProducts">
+              <PropertyRef Name="CodeProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LikeProdu__CodeU__367C1819">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="LikeProducts" Type="Self.LikeProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="LikeProducts">
+              <PropertyRef Name="CodeUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__Catego__2CF2ADDF">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CodeCategory" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CategoryProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__CodeSa__2EDAF651">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CodeSallerProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__SubCat__2DE6D218">
+          <End Role="SubCategories" Type="Self.SubCategories" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategories">
+              <PropertyRef Name="CodeSubCategory" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="SubCategoryProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SearchOfU__CodeU__3D2915A8">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="SearchOfUser" Type="Self.SearchOfUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="SearchOfUser">
+              <PropertyRef Name="CodeUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShoppingC__CodeP__395884C4">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="ShoppingCast" Type="Self.ShoppingCast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="CodeProduct" />
+            </Principal>
+            <Dependent Role="ShoppingCast">
+              <PropertyRef Name="CodeProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShoppingC__CodeU__3A4CA8FD">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="ShoppingCast" Type="Self.ShoppingCast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="ShoppingCast">
+              <PropertyRef Name="CodeUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SubCatego__CodeC__6FE99F9F">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="SubCategories" Type="Self.SubCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CodeCategory" />
+            </Principal>
+            <Dependent Role="SubCategories">
+              <PropertyRef Name="CodeCategorySub" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ComforTableModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Imajes" EntityType="Self.Imajes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LikeProducts" EntityType="Self.LikeProducts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SearchOfUser" EntityType="Self.SearchOfUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShoppingCast" EntityType="Self.ShoppingCast" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubCategories" EntityType="Self.SubCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Imajes__CodeProd__32AB8735" Association="Self.FK__Imajes__CodeProd__32AB8735">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Imajes" EntitySet="Imajes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LikeProdu__CodeP__3587F3E0" Association="Self.FK__LikeProdu__CodeP__3587F3E0">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="LikeProducts" EntitySet="LikeProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LikeProdu__CodeU__367C1819" Association="Self.FK__LikeProdu__CodeU__367C1819">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="LikeProducts" EntitySet="LikeProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__Catego__2CF2ADDF" Association="Self.FK__Products__Catego__2CF2ADDF">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__CodeSa__2EDAF651" Association="Self.FK__Products__CodeSa__2EDAF651">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__SubCat__2DE6D218" Association="Self.FK__Products__SubCat__2DE6D218">
+            <End Role="SubCategories" EntitySet="SubCategories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SearchOfU__CodeU__3D2915A8" Association="Self.FK__SearchOfU__CodeU__3D2915A8">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="SearchOfUser" EntitySet="SearchOfUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShoppingC__CodeP__395884C4" Association="Self.FK__ShoppingC__CodeP__395884C4">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ShoppingCast" EntitySet="ShoppingCast" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShoppingC__CodeU__3A4CA8FD" Association="Self.FK__ShoppingC__CodeU__3A4CA8FD">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ShoppingCast" EntitySet="ShoppingCast" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SubCatego__CodeC__6FE99F9F" Association="Self.FK__SubCatego__CodeC__6FE99F9F">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="SubCategories" EntitySet="SubCategories" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ComforTableModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="CodeCategory" />
+          </Key>
+          <Property Name="CodeCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__2D27B809" FromRole="Categories" ToRole="Products" />
+          <NavigationProperty Name="SubCategories" Relationship="Self.FK__SubCatego__CodeC__276EDEB3" FromRole="Categories" ToRole="SubCategories" />
+        </EntityType>
+        <EntityType Name="Imajes">
+          <Key>
+            <PropertyRef Name="CodeImaje" />
+          </Key>
+          <Property Name="CodeImaje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeProduct" Type="Int32" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Imajes__CodeProd__32E0915F" FromRole="Imajes" ToRole="Products" />
+          <Property Name="PuthImaje1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PuthImaje2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PuthImaje3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LikeProducts">
+          <Key>
+            <PropertyRef Name="CodeLikeProduct" />
+          </Key>
+          <Property Name="CodeLikeProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeProduct" Type="Int32" />
+          <Property Name="CodeUser" Type="Int32" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__LikeProdu__CodeP__35BCFE0A" FromRole="LikeProducts" ToRole="Products" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__LikeProdu__CodeU__36B12243" FromRole="LikeProducts" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Products">
+          <Key>
+            <PropertyRef Name="CodeProduct" />
+          </Key>
+          <Property Name="CodeProduct" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameProduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryProduct" Type="Int32" />
+          <Property Name="SubCategoryProduct" Type="Int32" />
+          <Property Name="CodeSallerProduct" Type="Int32" />
+          <Property Name="PriceProduct" Type="Double" />
+          <Property Name="DescriptionProduct" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="StatusProduct" Type="Int32" />
+          <Property Name="MoveOrBuy" Type="Int32" />
+          <Property Name="NewOrOld" Type="Int32" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK__Products__Catego__2D27B809" FromRole="Products" ToRole="Categories" />
+          <NavigationProperty Name="Imajes" Relationship="Self.FK__Imajes__CodeProd__32E0915F" FromRole="Products" ToRole="Imajes" />
+          <NavigationProperty Name="LikeProducts" Relationship="Self.FK__LikeProdu__CodeP__35BCFE0A" FromRole="Products" ToRole="LikeProducts" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__Products__CodeSa__2F10007B" FromRole="Products" ToRole="Users" />
+          <NavigationProperty Name="SubCategories" Relationship="Self.FK__Products__SubCat__2E1BDC42" FromRole="Products" ToRole="SubCategories" />
+          <NavigationProperty Name="ShoppingCast" Relationship="Self.FK__ShoppingC__CodeP__398D8EEE" FromRole="Products" ToRole="ShoppingCast" />
+          <Property Name="ProductSold" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SearchOfUser">
+          <Key>
+            <PropertyRef Name="CodeSearchOfUser" />
+          </Key>
+          <Property Name="CodeSearchOfUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeUser" Type="Int32" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__SearchOfU__CodeU__3D5E1FD2" FromRole="SearchOfUser" ToRole="Users" />
+          <Property Name="searchPath" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ShoppingCast">
+          <Key>
+            <PropertyRef Name="CodeShoppingCast" />
+          </Key>
+          <Property Name="CodeShoppingCast" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeProduct" Type="Int32" />
+          <Property Name="CodeUser" Type="Int32" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__ShoppingC__CodeP__398D8EEE" FromRole="ShoppingCast" ToRole="Products" />
+          <NavigationProperty Name="Users" Relationship="Self.FK__ShoppingC__CodeU__3A81B327" FromRole="ShoppingCast" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="SubCategories">
+          <Key>
+            <PropertyRef Name="CodeSubCategory" />
+          </Key>
+          <Property Name="CodeSubCategory" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameSubCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CodeCategorySub" Type="Int32" />
+          <NavigationProperty Name="Categories" Relationship="Self.FK__SubCatego__CodeC__276EDEB3" FromRole="SubCategories" ToRole="Categories" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__SubCat__2E1BDC42" FromRole="SubCategories" ToRole="Products" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="CodeUser" />
+          </Key>
+          <Property Name="CodeUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstNameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastNameUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordUser" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="EmailUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneUser" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AddresstUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LikeProducts" Relationship="Self.FK__LikeProdu__CodeU__36B12243" FromRole="Users" ToRole="LikeProducts" />
+          <NavigationProperty Name="Products" Relationship="Self.FK__Products__CodeSa__2F10007B" FromRole="Users" ToRole="Products" />
+          <NavigationProperty Name="SearchOfUser" Relationship="Self.FK__SearchOfU__CodeU__3D5E1FD2" FromRole="Users" ToRole="SearchOfUser" />
+          <NavigationProperty Name="ShoppingCast" Relationship="Self.FK__ShoppingC__CodeU__3A81B327" FromRole="Users" ToRole="ShoppingCast" />
+        </EntityType>
+        <Association Name="FK__Products__Catego__2D27B809">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CodeCategory" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CategoryProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SubCatego__CodeC__276EDEB3">
+          <End Role="Categories" Type="Self.Categories" Multiplicity="0..1" />
+          <End Role="SubCategories" Type="Self.SubCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="CodeCategory" />
+            </Principal>
+            <Dependent Role="SubCategories">
+              <PropertyRef Name="CodeCategorySub" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Imajes__CodeProd__32E0915F">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="Imajes" Type="Self.Imajes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="CodeProduct" />
+            </Principal>
+            <Dependent Role="Imajes">
+              <PropertyRef Name="CodeProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LikeProdu__CodeP__35BCFE0A">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="LikeProducts" Type="Self.LikeProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="CodeProduct" />
+            </Principal>
+            <Dependent Role="LikeProducts">
+              <PropertyRef Name="CodeProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LikeProdu__CodeU__36B12243">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="LikeProducts" Type="Self.LikeProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="LikeProducts">
+              <PropertyRef Name="CodeUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__CodeSa__2F10007B">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="CodeSallerProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Products__SubCat__2E1BDC42">
+          <End Role="SubCategories" Type="Self.SubCategories" Multiplicity="0..1" />
+          <End Role="Products" Type="Self.Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategories">
+              <PropertyRef Name="CodeSubCategory" />
+            </Principal>
+            <Dependent Role="Products">
+              <PropertyRef Name="SubCategoryProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShoppingC__CodeP__398D8EEE">
+          <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+          <End Role="ShoppingCast" Type="Self.ShoppingCast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Products">
+              <PropertyRef Name="CodeProduct" />
+            </Principal>
+            <Dependent Role="ShoppingCast">
+              <PropertyRef Name="CodeProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__SearchOfU__CodeU__3D5E1FD2">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="SearchOfUser" Type="Self.SearchOfUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="SearchOfUser">
+              <PropertyRef Name="CodeUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ShoppingC__CodeU__3A81B327">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="ShoppingCast" Type="Self.ShoppingCast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="CodeUser" />
+            </Principal>
+            <Dependent Role="ShoppingCast">
+              <PropertyRef Name="CodeUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ComforTableEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="Self.Categories" />
+          <EntitySet Name="Imajes" EntityType="Self.Imajes" />
+          <EntitySet Name="LikeProducts" EntityType="Self.LikeProducts" />
+          <EntitySet Name="Products" EntityType="Self.Products" />
+          <EntitySet Name="SearchOfUser" EntityType="Self.SearchOfUser" />
+          <EntitySet Name="ShoppingCast" EntityType="Self.ShoppingCast" />
+          <EntitySet Name="SubCategories" EntityType="Self.SubCategories" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <AssociationSet Name="FK__Products__Catego__2D27B809" Association="Self.FK__Products__Catego__2D27B809">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SubCatego__CodeC__276EDEB3" Association="Self.FK__SubCatego__CodeC__276EDEB3">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="SubCategories" EntitySet="SubCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Imajes__CodeProd__32E0915F" Association="Self.FK__Imajes__CodeProd__32E0915F">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="Imajes" EntitySet="Imajes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LikeProdu__CodeP__35BCFE0A" Association="Self.FK__LikeProdu__CodeP__35BCFE0A">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="LikeProducts" EntitySet="LikeProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LikeProdu__CodeU__36B12243" Association="Self.FK__LikeProdu__CodeU__36B12243">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="LikeProducts" EntitySet="LikeProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__CodeSa__2F10007B" Association="Self.FK__Products__CodeSa__2F10007B">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Products__SubCat__2E1BDC42" Association="Self.FK__Products__SubCat__2E1BDC42">
+            <End Role="SubCategories" EntitySet="SubCategories" />
+            <End Role="Products" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShoppingC__CodeP__398D8EEE" Association="Self.FK__ShoppingC__CodeP__398D8EEE">
+            <End Role="Products" EntitySet="Products" />
+            <End Role="ShoppingCast" EntitySet="ShoppingCast" />
+          </AssociationSet>
+          <AssociationSet Name="FK__SearchOfU__CodeU__3D5E1FD2" Association="Self.FK__SearchOfU__CodeU__3D5E1FD2">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="SearchOfUser" EntitySet="SearchOfUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ShoppingC__CodeU__3A81B327" Association="Self.FK__ShoppingC__CodeU__3A81B327">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="ShoppingCast" EntitySet="ShoppingCast" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ComforTableModelStoreContainer" CdmEntityContainer="ComforTableEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="ComforTableModel.Categories">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="CodeCategory" ColumnName="CodeCategory" />
+                <ScalarProperty Name="NameCategory" ColumnName="NameCategory" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Imajes">
+            <EntityTypeMapping TypeName="ComforTableModel.Imajes">
+              <MappingFragment StoreEntitySet="Imajes">
+                <ScalarProperty Name="PuthImaje3" ColumnName="PuthImaje3" />
+                <ScalarProperty Name="PuthImaje2" ColumnName="PuthImaje2" />
+                <ScalarProperty Name="PuthImaje1" ColumnName="PuthImaje1" />
+                <ScalarProperty Name="CodeImaje" ColumnName="CodeImaje" />
+                <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LikeProducts">
+            <EntityTypeMapping TypeName="ComforTableModel.LikeProducts">
+              <MappingFragment StoreEntitySet="LikeProducts">
+                <ScalarProperty Name="CodeLikeProduct" ColumnName="CodeLikeProduct" />
+                <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+                <ScalarProperty Name="CodeUser" ColumnName="CodeUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="ComforTableModel.Products">
+              <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="ProductSold" ColumnName="ProductSold" />
+                <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+                <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+                <ScalarProperty Name="CategoryProduct" ColumnName="CategoryProduct" />
+                <ScalarProperty Name="SubCategoryProduct" ColumnName="SubCategoryProduct" />
+                <ScalarProperty Name="CodeSallerProduct" ColumnName="CodeSallerProduct" />
+                <ScalarProperty Name="PriceProduct" ColumnName="PriceProduct" />
+                <ScalarProperty Name="DescriptionProduct" ColumnName="DescriptionProduct" />
+                <ScalarProperty Name="StatusProduct" ColumnName="StatusProduct" />
+                <ScalarProperty Name="MoveOrBuy" ColumnName="MoveOrBuy" />
+                <ScalarProperty Name="NewOrOld" ColumnName="NewOrOld" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SearchOfUser">
+            <EntityTypeMapping TypeName="ComforTableModel.SearchOfUser">
+              <MappingFragment StoreEntitySet="SearchOfUser">
+                <ScalarProperty Name="searchPath" ColumnName="searchPath" />
+                <ScalarProperty Name="CodeSearchOfUser" ColumnName="CodeSearchOfUser" />
+                <ScalarProperty Name="CodeUser" ColumnName="CodeUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShoppingCast">
+            <EntityTypeMapping TypeName="ComforTableModel.ShoppingCast">
+              <MappingFragment StoreEntitySet="ShoppingCast">
+                <ScalarProperty Name="CodeShoppingCast" ColumnName="CodeShoppingCast" />
+                <ScalarProperty Name="CodeProduct" ColumnName="CodeProduct" />
+                <ScalarProperty Name="CodeUser" ColumnName="CodeUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubCategories">
+            <EntityTypeMapping TypeName="ComforTableModel.SubCategories">
+              <MappingFragment StoreEntitySet="SubCategories">
+                <ScalarProperty Name="CodeSubCategory" ColumnName="CodeSubCategory" />
+                <ScalarProperty Name="NameSubCategory" ColumnName="NameSubCategory" />
+                <ScalarProperty Name="CodeCategorySub" ColumnName="CodeCategorySub" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="ComforTableModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="CodeUser" ColumnName="CodeUser" />
+                <ScalarProperty Name="FirstNameUser" ColumnName="FirstNameUser" />
+                <ScalarProperty Name="LastNameUser" ColumnName="LastNameUser" />
+                <ScalarProperty Name="PasswordUser" ColumnName="PasswordUser" />
+                <ScalarProperty Name="EmailUser" ColumnName="EmailUser" />
+                <ScalarProperty Name="PhoneUser" ColumnName="PhoneUser" />
+                <ScalarProperty Name="AddresstUser" ColumnName="AddresstUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

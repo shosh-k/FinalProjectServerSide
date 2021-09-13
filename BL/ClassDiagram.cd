@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BL.ComforTableBL">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACBAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ComforTableBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.CostOffer">
+    <Position X="8.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACQAAAAAhAgoEAAIQICQAAAoAABBAAIAAACCAAo=</HashCode>
+      <FileName>CostOffer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.Dijkstra.Dijkstra">
+    <Position X="4.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAAAAAAAKAAAAAIAAgiAAABAAAAAAAAAEIAAACAAQA=</HashCode>
+      <FileName>Dijkstra.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.EmailAndPayPal">
+    <Position X="6.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EmailAndPayPal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.LikeProduct">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAMAAAAAAAAAAAAAAAAAAAAABAAAAAAAAQAA=</HashCode>
+      <FileName>LikeProduct.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.MapsService">
+    <Position X="10.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>MapsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.Product">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAgAAAAAABAAIIQAAAAAAAQAAIAAAAAABAAAAAQA=</HashCode>
+      <FileName>Products.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.SearchOfUserBL">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>SearchOfUserBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.ShoppingCastBL">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAQAAAAAAAAAAAAAAAAAAAAAAAABAAAAAACAAAA=</HashCode>
+      <FileName>ShoppingCastBL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.User">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIAAAACAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BL.Category">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
